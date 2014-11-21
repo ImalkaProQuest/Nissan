@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Nissan Booking Survey Contact Email</name>
+    <style>none</style>
+    <subject>Nissan Fleet Evaluation Vehicle Survey Request</subject>
+    <textOnly>Having trouble reading this email? View the online version.
+
+Dear {!Evaluation_Booking__c.Contact_First_Name__c},
+
+We hope that you enjoyed your recent experience of driving the Nissan {!Evaluation_Booking__c.Vehicle_Name__c}. We would appreciate if you would take the time to complete the attached survey, which should take you no more than 10 minutes to complete.
+
+As part of our commitment to you, our valued Fleet customers, the results of the survey will be collected and used by the Nissan Fleet team to understand areas that are working well and identify improvement opportunities.
+
+Please feel free to contact me on {!Evaluation_Booking__c.Created_By_Email__c} or on {!Evaluation_Booking__c.Created_By_Phone__c}.
+
+You will find the link to the survey here
+
+We look forward to working with you in the future.
+
+With thanks,
+{!Evaluation_Booking__c.Created_By_Name__c}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

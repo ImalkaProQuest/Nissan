@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Delivery Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Delivery Schedules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action Required --></label>
+        <name>Action_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval --></label>
+        <name>Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost --></label>
+        <name>Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Delivery Schedules (Dealer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Finance Approved --></label>
+        <name>Finance_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Requested --></label>
+        <name>Finance_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Freight Approved --></label>
+        <name>Freight_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Freight Requested --></label>
+        <name>Freight_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incremental to Forecast --></label>
+        <name>Incremental_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Delivery Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Delivery Schedules (Organisation) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Approved --></label>
+        <name>Other_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Requested --></label>
+        <name>Other_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Relaxation Approved --></label>
+        <name>Registration_Relaxation_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Relaxation Requested --></label>
+        <name>Registration_Relaxation_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting Month --></label>
+        <name>Report_Month__c</name>
+        <relationshipLabel><!-- Delivery Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Special Assistance Approved --></label>
+        <name>Special_Assistance_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Assistance Requested --></label>
+        <name>Special_Assistance_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Delivery Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Volume --></label>
+        <name>Volume__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weekly Special --></label>
+        <name>Weekly_Special__c</name>
+    </fields>
+    <layouts>
+        <layout>Delivery Schedule Layout</layout>
+        <sections>
+            <label><!-- Approval --></label>
+            <section>Approval</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cannot add a Delivery Schedule to a Closed Lost or Discontinued Opportunity. --></errorMessage>
+        <name>Opportunity_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Select a vehicle at level 1 in the product hierarchy. --></errorMessage>
+        <name>Product_Level</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Custom_New_Delivery_Schedule_Account --></label>
+        <name>Custom_New_Delivery_Schedule_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Custom_New_Opportunity --></label>
+        <name>Custom_New_Opportunity</name>
+    </webLinks>
+</CustomObjectTranslation>

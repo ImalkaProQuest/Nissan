@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Survey Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Type --></label>
+        <name>Customer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Detractor</masterLabel>
+            <translation><!-- Detractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promoter</masterLabel>
+            <translation><!-- Promoter --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Evaluation Booking --></label>
+        <name>Evaluation_Booking__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NPS Score --></label>
+        <name>NPS_Score_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- NPS count --></label>
+        <name>NPS_count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 1 Comments --></label>
+        <name>Question_1_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- How would you rate this vehicle compared to your current like for like fleet/drive vehicle? --></help>
+        <label><!-- Vehicle rate compared to current vehicle --></label>
+        <name>Question_1__c</name>
+        <picklistValues>
+            <masterLabel>Better than current</masterLabel>
+            <translation><!-- Better than current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Same as current</masterLabel>
+            <translation><!-- Same as current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worse than current</masterLabel>
+            <translation><!-- Worse than current --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- (engine options and fuel economy) --></help>
+        <label><!-- Performance rate --></label>
+        <name>Question_2_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- safety technology --></help>
+        <label><!-- Safety rate --></label>
+        <name>Question_2_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- (seat position/adjustability, visibility, road handling) --></help>
+        <label><!-- Comfort and Handling rate --></label>
+        <name>Question_2_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Styling (interior and exterior) --></help>
+        <label><!-- Styling rate --></label>
+        <name>Question_2_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Innovation (vehicle features and specification) --></help>
+        <label><!-- Innovation rate --></label>
+        <name>Question_2_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fit for Purpose (specic needs e.g. storage, exibility) --></help>
+        <label><!-- Fit for purpose rate --></label>
+        <name>Question_2_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- Value for Money (includes price of vehicle, servicing costs and 
+ Whole of Life calculation) --></help>
+        <label><!-- Value for Money rate --></label>
+        <name>Question_2_7__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was available when I needed it. --></help>
+        <label><!-- Vehicle was available when I needed it --></label>
+        <name>Question_3_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was available for as long as I needed it --></help>
+        <label><!-- Available for as long as you needed it --></label>
+        <name>Question_3_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was vehicle delivered by a Nissan representative --></help>
+        <label><!-- Delivered by a Nissan representative --></label>
+        <name>Question_3_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was delivered by a transport supplier --></help>
+        <label><!-- Delivered by a transport supplier --></label>
+        <name>Question_3_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was vehicle delivered clean --></help>
+        <label><!-- Vehicle delivered clean --></label>
+        <name>Question_3_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- The vehicle was delivered with suitable fuel --></help>
+        <label><!-- Delivered with suitable fuel --></label>
+        <name>Question_3_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- I was advised of the insurance and tolls policy for driving this vehicle --></help>
+        <label><!-- Advised of Insurance and Tolls policy --></label>
+        <name>Question_3_7__c</name>
+    </fields>
+    <fields>
+        <help><!-- I signed the Indemnity Form --></help>
+        <label><!-- I signed the Indemnity Form --></label>
+        <name>Question_3_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 3 Comments --></label>
+        <name>Question_3_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Price --></help>
+        <label><!-- Price --></label>
+        <name>Question_4_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fit for Purpose --></help>
+        <label><!-- Fit for Purpose --></label>
+        <name>Question_4_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Whole of Life costs --></help>
+        <label><!-- Whole of Life costs --></label>
+        <name>Question_4_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Accessories --></help>
+        <label><!-- Accessories --></label>
+        <name>Question_4_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Warranty --></help>
+        <label><!-- Warranty --></label>
+        <name>Question_4_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Other --></help>
+        <label><!-- Other --></label>
+        <name>Question_4_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 4 Comments --></label>
+        <name>Question_4_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- What Nissan vehicle would you like to drive next? --></help>
+        <label><!-- Vehicle would you like to drive next? --></label>
+        <name>Question_5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Based on your experience with Nissan Fleet, how likely are you to 
+ recommend Nissan to a friend or colleague? --></help>
+        <label><!-- Recommend Nissan? --></label>
+        <name>Question_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- Based on your experience with driving the &lt;insert model here&gt;, how likely 
+ are you to recommend this vehicle to a friend or colleague? --></help>
+        <label><!-- Recommend Vehicle? --></label>
+        <name>Question_7__c</name>
+    </fields>
+    <fields>
+        <help><!-- Would you like to stay updated with Nissan Fleet news? --></help>
+        <label><!-- Stay updated with Nissan Fleet news? --></label>
+        <name>Question_8__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Survey Result Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

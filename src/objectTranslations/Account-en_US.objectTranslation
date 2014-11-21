@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Address</value>
+        </caseValues>
+        <name>billing_address_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>City</value>
+        </caseValues>
+        <name>billing_city_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Country</value>
+        </caseValues>
+        <name>billing_country_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Country Code</value>
+        </caseValues>
+        <name>billing_country_code_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>State/Province</value>
+        </caseValues>
+        <name>billing_state_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>State/Province Code</value>
+        </caseValues>
+        <name>billing_state_code_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Street</value>
+        </caseValues>
+        <name>billing_street_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Postal Code</value>
+        </caseValues>
+        <name>billing_zip_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Customer Type</value>
+        </caseValues>
+        <name>type_account</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- ABN --></label>
+        <name>ABN__c</name>
+    </fields>
+    <fields>
+        <name>AccountSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Database Department Campaign</masterLabel>
+            <translation><!-- Database Department Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drive Day</masterLabel>
+            <translation><!-- Drive Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Relationship</masterLabel>
+            <translation><!-- Existing Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Generated</masterLabel>
+            <translation><!-- Sales Generated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account ID --></label>
+        <name>Account_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Amount Claimed --></label>
+        <name>Amount_Claimed_by_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Remaining --></label>
+        <name>Amount_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Remaining --></label>
+        <name>Amount_Remaining_by_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Approved Amount --></label>
+        <name>Amount_Requested_by_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Development Manager --></label>
+        <name>Business_Development_Manager__c</name>
+        <picklistValues>
+            <masterLabel>Andrew Ivers</masterLabel>
+            <translation><!-- Andrew Ivers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Austin Thomson</masterLabel>
+            <translation><!-- Austin Thomson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM 1</masterLabel>
+            <translation><!-- BDM 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carolyn Rayner</masterLabel>
+            <translation><!-- Carolyn Rayner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Craig Brown</masterLabel>
+            <translation><!-- Craig Brown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Darin Watson</masterLabel>
+            <translation><!-- Darin Watson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jason Koster</masterLabel>
+            <translation><!-- Jason Koster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kate Lucas</masterLabel>
+            <translation><!-- Kate Lucas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linda Beach</masterLabel>
+            <translation><!-- Linda Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marcel Lal</masterLabel>
+            <translation><!-- Marcel Lal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mark Shepherd</masterLabel>
+            <translation><!-- Mark Shepherd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matthew Baily</masterLabel>
+            <translation><!-- Matthew Baily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mishelle Oberscheider</masterLabel>
+            <translation><!-- Mishelle Oberscheider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paul Coulton</masterLabel>
+            <translation><!-- Paul Coulton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paul Crowley</masterLabel>
+            <translation><!-- Paul Crowley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paul Jenkins</masterLabel>
+            <translation><!-- Paul Jenkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pep Giorgio</masterLabel>
+            <translation><!-- Pep Giorgio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peter Coorey</masterLabel>
+            <translation><!-- Peter Coorey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peter Dimopoulos</masterLabel>
+            <translation><!-- Peter Dimopoulos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shannon Bell</masterLabel>
+            <translation><!-- Shannon Bell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stuart Webster</masterLabel>
+            <translation><!-- Stuart Webster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vicki Murphy</masterLabel>
+            <translation><!-- Vicki Murphy --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Channel Manager --></label>
+        <name>Channel_Manager__c</name>
+        <relationshipLabel><!-- Accounts (Channel Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>Direct</masterLabel>
+            <translation><!-- Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Fleet</masterLabel>
+            <translation><!-- Large Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not for Profit</masterLabel>
+            <translation><!-- Not for Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental</masterLabel>
+            <translation><!-- Rental --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Classification --></label>
+        <name>Classification__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Acessories Policy --></label>
+        <name>Company_Acessories_Policy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Colour Policy --></label>
+        <name>Company_Colour_Policy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Change Over Policy --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current contracted OEM --></label>
+        <name>Current_Contracted_OEM__c</name>
+        <picklistValues>
+            <masterLabel>Ford</masterLabel>
+            <translation><!-- Ford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holden</masterLabel>
+            <translation><!-- Holden --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Huyndai</masterLabel>
+            <translation><!-- Huyndai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mazda</masterLabel>
+            <translation><!-- Mazda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mitsubushi</masterLabel>
+            <translation><!-- Mitsubushi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toyota</masterLabel>
+            <translation><!-- Toyota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VW</masterLabel>
+            <translation><!-- VW --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Fleet Model Notes --></label>
+        <name>Current_Fleet_Model_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current preferred vehicle model --></label>
+        <name>Current_preferred_vehicle_model__c</name>
+    </fields>
+    <fields>
+        <label><!-- DBD RMTC Campaign --></label>
+        <name>DBD_RMTC_Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUNS --></label>
+        <name>DUNS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Approved in Mainframe --></label>
+        <name>Date_Approved_in_Mainframe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Entitled to Pricing Hierarchy --></label>
+        <name>Entitled_to_Pricing_Hierarchy__c</name>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEAF</masterLabel>
+            <translation><!-- LEAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premuim</masterLabel>
+            <translation><!-- Premuim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date you expect current contract with other OEM will finish --></help>
+        <label><!-- Est. contract end date --></label>
+        <name>Est_contract_end_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has a Contract? --></label>
+        <name>Has_a_Contract__c</name>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Accommodation and Food Services</masterLabel>
+            <translation><!-- Accommodation and Food Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative and Supportive Services</masterLabel>
+            <translation><!-- Administrative and Supportive Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agriculture, Forestry and Fishing</masterLabel>
+            <translation><!-- Agriculture, Forestry and Fishing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts and Recreation Services</masterLabel>
+            <translation><!-- Arts and Recreation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education and Training</masterLabel>
+            <translation><!-- Education and Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electricity, Gas, Water and Waste Servic</masterLabel>
+            <translation><!-- Electricity, Gas, Water and Waste Servic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial and Insurance Services</masterLabel>
+            <translation><!-- Financial and Insurance Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Care and Social Assistance</masterLabel>
+            <translation><!-- Health Care and Social Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Media and Telecommunications</masterLabel>
+            <translation><!-- Information Media and Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mining</masterLabel>
+            <translation><!-- Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit</masterLabel>
+            <translation><!-- Not For Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Services</masterLabel>
+            <translation><!-- Other Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional, Scientific and Technical S</masterLabel>
+            <translation><!-- Professional, Scientific and Technical S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Administration and Safety</masterLabel>
+            <translation><!-- Public Administration and Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental, Hiring and Real Estate Services</masterLabel>
+            <translation><!-- Rental, Hiring and Real Estate Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail Trade</masterLabel>
+            <translation><!-- Retail Trade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport, Postal and Warehousing</masterLabel>
+            <translation><!-- Transport, Postal and Warehousing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wholesale Trade</masterLabel>
+            <translation><!-- Wholesale Trade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last contract tender run --></label>
+        <name>Last_Contract_Tender_run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Make up of Current Fleet --></label>
+        <name>Make_up_of_Current_Fleet__c</name>
+        <picklistValues>
+            <masterLabel>Ford</masterLabel>
+            <translation><!-- Ford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mitsubishi</masterLabel>
+            <translation><!-- Mitsubishi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toyota</masterLabel>
+            <translation><!-- Toyota --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market Approach --></label>
+        <name>Market_Approach__c</name>
+        <picklistValues>
+            <masterLabel>Bulk Purchase Request</masterLabel>
+            <translation><!-- Bulk Purchase Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tender</masterLabel>
+            <translation><!-- Tender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>individual Quote</masterLabel>
+            <translation><!-- individual Quote --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Does this organisation have a Global Relationship with Nissan? --></help>
+        <label><!-- Nissan Global Relationship --></label>
+        <name>Nissan_Global_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Light &lt; $25K --></label>
+        <name>No_of_Light_25K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Light buses &lt; 20 seats --></label>
+        <name>No_of_Light_buses_20_seats__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Meduim &lt; $60K --></label>
+        <name>No_of_Meduim_60K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of PU/CC 4x2 --></label>
+        <name>No_of_PU_CC_4x2__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of PU/CC 4x4 --></label>
+        <name>No_of_PU_CC_4x4__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of People Movers &lt; $55K --></label>
+        <name>No_of_People_Movers_55K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of SUV Large &lt; $70K --></label>
+        <name>No_of_SUV_Large_70K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of SUV Medium &lt; $60K --></label>
+        <name>No_of_SUV_Medium_60K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of SUV Upper Large &lt; $100K --></label>
+        <name>No_of_SUV_Upper_Large_100K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Sports &lt; $80K --></label>
+        <name>No_of_Sports_80K__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Vans/CC 2.5-3.5t --></label>
+        <name>No_of_Vans_CC_2_5_3_5t__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles Claimed --></label>
+        <name>Number_of_Vehicles_Claimed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles in Company Fleet --></label>
+        <name>Number_of_Vehicles_in_Company_Fleet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles in Private Names --></label>
+        <name>Number_of_Vehicles_in_Private_Names__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles remaining --></label>
+        <name>Number_of_Vehicles_remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Office Locations --></label>
+        <name>Office_Locations__c</name>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional</masterLabel>
+            <translation><!-- Regional --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Organisation Region --></label>
+        <name>Organisation_Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation Type --></label>
+        <name>Organisation_Type__c</name>
+        <picklistValues>
+            <masterLabel>Parent</masterLabel>
+            <translation><!-- Parent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Office</masterLabel>
+            <translation><!-- Regional Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsidiary</masterLabel>
+            <translation><!-- Subsidiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Ownership</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private</masterLabel>
+            <translation><!-- Private --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public</masterLabel>
+            <translation><!-- Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsidiary</masterLabel>
+            <translation><!-- Subsidiary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Account Id --></label>
+        <name>Parent_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is this the Parent Account? --></label>
+        <name>Parent_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Dealer --></label>
+        <name>Primary_Dealer__c</name>
+        <relationshipLabel><!-- Organisations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prospect Type --></label>
+        <name>Prospect_Type__c</name>
+        <picklistValues>
+            <masterLabel>H60A Navara</masterLabel>
+            <translation><!-- H60A Navara --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>T32 X-Trail Diesel</masterLabel>
+            <translation><!-- T32 X-Trail Diesel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Eastern</masterLabel>
+            <translation><!-- Eastern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern</masterLabel>
+            <translation><!-- Northern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern</masterLabel>
+            <translation><!-- Southern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western</masterLabel>
+            <translation><!-- Western --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Regional Fleet Manager --></label>
+        <name>Regional_Fleet_Manager__c</name>
+        <relationshipLabel><!-- Accounts (Regional Fleet Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Small &lt; $40K --></label>
+        <name>Small_40K__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CEASED TRADING</masterLabel>
+            <translation><!-- CEASED TRADING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CURRENT DEALER</masterLabel>
+            <translation><!-- CURRENT DEALER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTS &amp; VEHICLE FREEZE</masterLabel>
+            <translation><!-- PARTS &amp; VEHICLE FREEZE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTS FREEZE</masterLabel>
+            <translation><!-- PARTS FREEZE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VEHICLES FREEZE</masterLabel>
+            <translation><!-- VEHICLES FREEZE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Supplier --></label>
+        <name>Supplier__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total amount claimed by dealer --></help>
+        <label><!-- Total Amount Claimed --></label>
+        <name>Total_Amount_Claimed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total approved amount of special assistance for this dealer. --></help>
+        <label><!-- Total Approved Amount --></label>
+        <name>Total_Approved_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Novated Fleet size --></label>
+        <name>Total_Novated_Fleet_size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Tool of Trade fleet size --></label>
+        <name>Total_Tool_of_Trade_fleet_size__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation><!-- Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrator</masterLabel>
+            <translation><!-- Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor</masterLabel>
+            <translation><!-- Investor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press</masterLabel>
+            <translation><!-- Press --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles Approved --></label>
+        <name>Vehicles_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles Approved --></label>
+        <name>Vehicles_Approved_for_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles Claimed --></label>
+        <name>Vehicles_Claimed_by_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Vehicles remaining --></label>
+        <name>Vehicles_Remaining_by_Organisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zone --></label>
+        <name>Zone__c</name>
+    </fields>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Company Policies --></label>
+            <section>Company Policies</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dealer Account Layout</layout>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Expired Dealer</layout>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Expired FMO Account</layout>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Expired Organisation Account Layout</layout>
+        <sections>
+            <label><!-- Current Fleet &amp; Organisation Policies --></label>
+            <section>Current Fleet &amp; Organisation Policies</section>
+        </sections>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FMO Account Layout</layout>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Organisation Account Layout</layout>
+        <sections>
+            <label><!-- Fleet Profile --></label>
+            <section>Fleet Profile</section>
+        </sections>
+        <sections>
+            <label><!-- Special Assistance Totals --></label>
+            <section>Special Assistance Totals</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Dealer --></label>
+        <name>Dealer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Direct --></label>
+        <name>Direct</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expired Dealer --></label>
+        <name>Expired_Dealer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expired Direct --></label>
+        <name>Expired_Direct</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expired FMO --></label>
+        <name>Expired_FMO</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Expired Organisation --></label>
+        <name>Expired_Organisation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- FMO Organisation --></label>
+        <name>FMO_Organisation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Organisation --></label>
+        <name>Organisation</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- ABN must be numeric --></errorMessage>
+        <name>ABN_must_be_numeric</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- D_B_ASIC_Search --></label>
+        <name>D_B_ASIC_Search</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Delete --></label>
+        <name>Mass_Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Docs --></label>
+        <name>SDOC__Email_Docs</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- S_Docs --></label>
+        <name>SDOC__S_Docs</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

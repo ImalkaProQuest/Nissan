@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor Fleet Model</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor Fleet Models</value>
+    </caseValues>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>Competitor__c</name>
+        <relationshipLabel><!-- Competitor Fleet Models --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Model --></label>
+        <name>Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Category --></label>
+        <name>Price_Category__c</name>
+        <picklistValues>
+            <masterLabel>Light &lt; $25K</masterLabel>
+            <translation><!-- Light &lt; $25K --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Type --></label>
+        <name>Vehicle_Type__c</name>
+        <picklistValues>
+            <masterLabel>Light Commercial</masterLabel>
+            <translation><!-- Light Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passenger</masterLabel>
+            <translation><!-- Passenger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUV</masterLabel>
+            <translation><!-- SUV --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Competitor Fleet Model Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

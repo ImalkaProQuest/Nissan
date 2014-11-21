@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Final Cancellation Email</name>
+    <style>none</style>
+    <subject>Cancellation of Nissan Fleet Evaluation vehicle</subject>
+    <textOnly>Dear {!Evaluation_Booking__c.Contact_First_Name__c},
+
+Your request to cancel your evaluation vehicle has been acknowledged and actioned in our systems.
+
+Vehicle: {!Evaluation_Booking__c.Model__c}
+Registration: {!Evaluation_Booking__c.Rego__c}
+
+Should you wish to re-schedule your evaluation vehicle for a future date, please contact {!Evaluation_Booking__c.Nissan_Representative__c} on {!Evaluation_Booking__c.Nissan_Representative_Email__c} or {!Evaluation_Booking__c.Nissan_Representative_Mobile__c}.
+
+Yours Sincerely,
+
+The Nissan Fleet team.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

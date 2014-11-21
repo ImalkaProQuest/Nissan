@@ -1,0 +1,13 @@
+Dear {!Evaluation_Booking__c.Contact_First_Name__c},
+<br/><br/>
+Your request to cancel your evaluation vehicle has been acknowledged and actioned in our systems. <br/>
+<br/>
+Vehicle: {!Evaluation_Booking__c.Model__c}
+<br/><br/>
+Registration: {!Evaluation_Booking__c.Rego__c}
+<br/><br/>
+Should you wish to re-schedule your evaluation vehicle for a future date, please contact {!Evaluation_Booking__c.Nissan_Representative__c} on {!Evaluation_Booking__c.Nissan_Representative_Email__c} or {!Evaluation_Booking__c.Nissan_Representative_Mobile__c}.
+<br/><br/>
+Yours Sincerely,
+<br/><br/>
+The Nissan Fleet team.

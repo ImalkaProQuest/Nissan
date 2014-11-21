@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>*List Price</value>
+        </caseValues>
+        <name>quotelineitem_listprice</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>List Price</value>
+        </caseValues>
+        <name>quotelineitem_salesprice</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Budget Price --></label>
+        <name>Budget_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Price --></label>
+        <name>Contract_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Margin Amount --></label>
+        <name>Dealer_Margin_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Margin % --></label>
+        <name>Dealer_Margin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery --></label>
+        <name>Delivery__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Amount --></label>
+        <name>Discount_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nissan Support --></label>
+        <name>Nissan_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- RRP --></label>
+        <name>RRP__c</name>
+    </fields>
+    <layouts>
+        <layout>Quote Line Item Layout</layout>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Enter a whole number only. --></errorMessage>
+        <name>Product_Quantity</name>
+    </validationRules>
+</CustomObjectTranslation>

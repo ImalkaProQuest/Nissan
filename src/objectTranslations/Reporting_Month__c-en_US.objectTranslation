@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reporting Month</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reporting Months</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dealer Forecast Total --></label>
+        <name>Dealer_Forecast_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Gap --></label>
+        <name>Dealer_Gap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Target Total --></label>
+        <name>Dealer_Target_Total__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

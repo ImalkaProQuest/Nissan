@@ -1,0 +1,6 @@
+Contract with 6 months Remaining
+
+Contract Number {!Contract.ContractNumber} with {!Contract.Account} is set to expire on {!Contract.EndDate}
+
+Here is the link to the contract: 
+{!Contract.Link}

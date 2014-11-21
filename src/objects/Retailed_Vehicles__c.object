@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Sales_Type__c , 
+&quot;E&quot;, &quot;LARGE&quot;, 
+&quot;I&quot;, &quot;LARGE&quot;,
+&quot;K&quot;, &quot;LARGE&quot;,
+&quot;M&quot;, &quot;LARGE&quot;,
+&quot;N&quot;, &quot;LARGE&quot;,
+&quot;P&quot;, &quot;LARGE&quot;,
+&quot;Q&quot;, &quot;LARGE&quot;,
+&quot;U&quot;, &quot;LARGE&quot;,
+&quot;W&quot;, &quot;LARGE&quot;,
+&quot;X&quot;, &quot;LARGE&quot;,
+&quot;H&quot;, &quot;Rental&quot;,
+&quot;C&quot;, &quot;Government&quot;,
+&quot;L&quot;, &quot;Government&quot;,
+&quot;S&quot;, &quot;Government&quot;,
+&quot;Y&quot;, &quot;Not for Profit&quot;,
+&quot;1&quot;, &quot;Direct Rental&quot;, 
+&quot;2&quot;, &quot;Direct Government&quot;,
+&quot;4&quot;, &quot;Direct Large&quot;,
+&quot;T&quot;, &quot;Direct Large&quot;, 
+&quot;Sales Type Error&quot;)</formula>
+        <inlineHelpText>Channel derived from Sales Type.</inlineHelpText>
+        <label>Channel</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dealer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dealer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Dealer Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_3_Vehicle_Variant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 3 Vehicle Variant</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Retailed Vehicles (Level 3 Vehicle Variant)</relationshipLabel>
+        <relationshipName>Retailed_Vehicles1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Model_Series__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Model Series</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Retailed Vehicles (Model Series)</relationshipLabel>
+        <relationshipName>Retailed_Vehicles2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Write__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Order Write</label>
+        <referenceTo>Order_Writes__c</referenceTo>
+        <relationshipLabel>Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Organisation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Organisation</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Customer Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>Can be -1 for reversals</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Dealer__r.Region__c )</formula>
+        <inlineHelpText>Dealer&apos;s region</inlineHelpText>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Retailed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Retailed Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Retailed_Vehicle_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Retailed Vehicle Id</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SUO_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SUO Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Type</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Assistance_Number__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Special Assistance Number</label>
+        <referenceTo>Special_Assistance__c</referenceTo>
+        <relationshipLabel>Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TECH_Organisation_RecordtypeName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Organisation__r.RecordType.DeveloperName</formula>
+        <label>TECH_Organisation_RecordtypeName</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Retail or Reversal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Retail or Reversal</inlineHelpText>
+        <label>Type</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIN_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>VIN Number</label>
+        <length>17</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vehicle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Retailed Vehicles</relationshipLabel>
+        <relationshipName>Retailed_Vehicles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Retailed Vehicle</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Retailed_Vehicle_Id__c</columns>
+        <columns>Vehicle__c</columns>
+        <columns>Dealer__c</columns>
+        <columns>Organisation__c</columns>
+        <columns>Quantity__c</columns>
+        <columns>Retailed_Date__c</columns>
+        <columns>Sales_Type__c</columns>
+        <columns>Special_Assistance_Number__c</columns>
+        <columns>Order_Write__c</columns>
+        <columns>Type__c</columns>
+        <columns>VIN_Number__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>channel</fullName>
+        <columns>NAME</columns>
+        <columns>Channel__c</columns>
+        <columns>Dealer__c</columns>
+        <columns>Organisation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Retailed_Date__c</field>
+            <operation>equals</operation>
+            <value>THIS_YEAR</value>
+        </filters>
+        <label>channel</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RV-{0000}</displayFormat>
+        <label>Retailed Vehicle Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Retailed Vehicles</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Dealer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Organisation__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vehicle__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Dealer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Organisation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Vehicle__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Level_3_Vehicle_Variant__c</searchFilterFields>
+        <searchFilterFields>Model_Series__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchResultsAdditionalFields>Dealer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Organisation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vehicle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Order_Write__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Special_Assistance_Number__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

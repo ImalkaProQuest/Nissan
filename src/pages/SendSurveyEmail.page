@@ -1,0 +1,8 @@
+<!--  
+    *Visual force page for the Send Survey Email button
+    *@author Kim Noceda - Proquest IT
+    *@version 1.0 Created 10/16/2014
+-->
+<apex:page standardController="Evaluation_Booking__c" extensions="SendSurveyEmailExtension" action="{!sendEmail}">
+    <apex:pageMessages />
+</apex:page>

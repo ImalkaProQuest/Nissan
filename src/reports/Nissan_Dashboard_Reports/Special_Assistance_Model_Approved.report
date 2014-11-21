@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Special_Assistance__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Special_Assistance__c$Vehicles_Requested__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Special_Assistance__c$Status__c</column>
+            <operator>equals</operator>
+            <value>Approved,Expired</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Special_Assistance__c$Vehicle__c.Model_Series__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Special Assistance - Model Approved</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Special_Assistance_with_Region_Channel__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Special_Assistance__c$Effective_To_Date__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

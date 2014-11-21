@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Forecast</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Forecasts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dealer Forecast --></label>
+        <name>Dealer_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Forecast --></label>
+        <name>Direct_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eastern Forecast --></label>
+        <name>Eastern_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Northern Forecast --></label>
+        <name>Northern_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reporting Month --></label>
+        <name>Report_Month__c</name>
+        <relationshipLabel><!-- Forecasts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Southern Forecast --></label>
+        <name>Southern_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Forecast --></label>
+        <name>Total_Forecast__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Forecasts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Western Forecast --></label>
+        <name>Western_Forecast__c</name>
+    </fields>
+    <layouts>
+        <layout>Forecast Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Select a vehicle at level 1 in the product hierarchy. --></errorMessage>
+        <name>Product_Level</name>
+    </validationRules>
+</CustomObjectTranslation>

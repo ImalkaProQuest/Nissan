@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Evaluation Vehicle</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Evaluation Vehicles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Body --></label>
+        <name>Body__c</name>
+        <picklistValues>
+            <masterLabel>Dual Cab</masterLabel>
+            <translation><!-- Dual Cab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hatch</masterLabel>
+            <translation><!-- Hatch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hybrid</masterLabel>
+            <translation><!-- Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sedan</masterLabel>
+            <translation><!-- Sedan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Cab</masterLabel>
+            <translation><!-- Single Cab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wagon</masterLabel>
+            <translation><!-- Wagon --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Colour --></label>
+        <name>Colour__c</name>
+        <picklistValues>
+            <masterLabel>Black</masterLabel>
+            <translation><!-- Black --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grey</masterLabel>
+            <translation><!-- Grey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ivory Pearl</masterLabel>
+            <translation><!-- Ivory Pearl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>White</masterLabel>
+            <translation><!-- White --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <lookupFilter>
+            <errorMessage><!-- Must select a dealer --></errorMessage>
+        </lookupFilter>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Dealer Evaluation Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Delivery Date --></label>
+        <name>Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drive --></label>
+        <name>Drive__c</name>
+        <picklistValues>
+            <masterLabel>2WD</masterLabel>
+            <translation><!-- 2WD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4WD</masterLabel>
+            <translation><!-- 4WD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AWD</masterLabel>
+            <translation><!-- AWD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- FMO --></label>
+        <lookupFilter>
+            <errorMessage><!-- Must select an FMO --></errorMessage>
+        </lookupFilter>
+        <name>FMO__c</name>
+        <relationshipLabel><!-- FMO Evaluation Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Grade --></label>
+        <name>Grade__c</name>
+        <picklistValues>
+            <masterLabel>Hybrid</masterLabel>
+            <translation><!-- Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RX</masterLabel>
+            <translation><!-- RX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST</masterLabel>
+            <translation><!-- ST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST-L</masterLabel>
+            <translation><!-- ST-L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TL</masterLabel>
+            <translation><!-- TL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TS</masterLabel>
+            <translation><!-- TS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ti</masterLabel>
+            <translation><!-- Ti --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ti-L</masterLabel>
+            <translation><!-- Ti-L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ti-S</masterLabel>
+            <translation><!-- Ti-S --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Insured --></label>
+        <name>Insured__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kilometers almost up --></label>
+        <name>Kilometers_almost_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Kms --></label>
+        <name>Kms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Live Duration --></label>
+        <name>Live_Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Live End date --></label>
+        <name>Live_End_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Live Start date --></label>
+        <name>Live_Start_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Term --></label>
+        <name>Long_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Model Name --></label>
+        <name>Model_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Model --></label>
+        <name>Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Date --></label>
+        <name>Off_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- On Date --></label>
+        <name>On_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Evaluation Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Purpose --></label>
+        <name>Purpose__c</name>
+        <picklistValues>
+            <masterLabel>Fleet Agreement to provide vehicles</masterLabel>
+            <translation><!-- Fleet Agreement to provide vehicles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet Customer Evaluation</masterLabel>
+            <translation><!-- Fleet Customer Evaluation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Launch Evaluation</masterLabel>
+            <translation><!-- Launch Evaluation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region Initials --></label>
+        <name>Region_Initials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Eastern</masterLabel>
+            <translation><!-- Eastern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head Office</masterLabel>
+            <translation><!-- Head Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern</masterLabel>
+            <translation><!-- Northern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern</masterLabel>
+            <translation><!-- Southern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western</masterLabel>
+            <translation><!-- Western --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rego Expiring --></label>
+        <name>Rego_Expiring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rego Expiry --></label>
+        <name>Rego_Expiry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Returned Date --></label>
+        <name>Returned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUO --></label>
+        <name>SUO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spare key --></label>
+        <name>Spare_key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spare key location --></label>
+        <name>Spare_key_location__c</name>
+        <picklistValues>
+            <masterLabel>Eastern</masterLabel>
+            <translation><!-- Eastern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head Office</masterLabel>
+            <translation><!-- Head Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern</masterLabel>
+            <translation><!-- Northern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern</masterLabel>
+            <translation><!-- Southern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western</masterLabel>
+            <translation><!-- Western --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Grounded</masterLabel>
+            <translation><!-- Grounded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live</masterLabel>
+            <translation><!-- Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ordered</masterLabel>
+            <translation><!-- Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To be grounded</masterLabel>
+            <translation><!-- To be grounded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TECH_Model --></label>
+        <name>TECH_Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Booking Utilisation --></label>
+        <name>Total_Booking_Utilisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trans Initials --></label>
+        <name>Trans_Initials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trans --></label>
+        <name>Trans__c</name>
+    </fields>
+    <fields>
+        <label><!-- Utilisation --></label>
+        <name>Utilisation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variant --></label>
+        <name>Variant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Registration --></label>
+        <name>Vehicle_Registration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <lookupFilter>
+            <errorMessage><!-- Please select vehicles with SFDC Product Level 1 --></errorMessage>
+        </lookupFilter>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Evaluation Vehicles --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Evaluation Vehicle Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Lifespan of Evaluation Vehicle --></label>
+            <section>Lifespan of Evaluation Vehicle</section>
+        </sections>
+        <sections>
+            <label><!-- Model Details --></label>
+            <section>Model Details</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Specific --></label>
+            <section>Vehicle Specific</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

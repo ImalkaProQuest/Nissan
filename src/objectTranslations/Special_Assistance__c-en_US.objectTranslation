@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Special Assistance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Special Assistance</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount Claimed --></label>
+        <name>Amount_Claimed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Remaining --></label>
+        <name>Amount_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Requested Per Vehicle --></label>
+        <name>Amount_Requested_Per_Vehicle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Approved Amount --></label>
+        <name>Amount_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Amount per Vehicle --></label>
+        <name>Approved_Amount_per_Vehicle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Date --></label>
+        <name>Approved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <lookupFilter>
+            <errorMessage><!-- Must be a Dealer account --></errorMessage>
+        </lookupFilter>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Dealer Special Assistance --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Effective From Date --></label>
+        <name>Effective_From_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective To Date --></label>
+        <name>Effective_To_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of vehicles requested by dealer. --></help>
+        <label><!-- Number of Vehicles Requested --></label>
+        <name>Number_of_Vehicles_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Customer Special Assistance --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Assistance Id --></label>
+        <name>Special_Assistance_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete</masterLabel>
+            <translation><!-- Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid</masterLabel>
+            <translation><!-- Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raised</masterLabel>
+            <translation><!-- Raised --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Special Assistance --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Number of retailed vehicles against this Special Assistance request. --></help>
+        <label><!-- Vehicles Claimed --></label>
+        <name>Vehicles_Claimed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicles Remaining --></label>
+        <name>Vehicles_Remaining__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of vehicles approved by Nissan. --></help>
+        <label><!-- Number of Vehicles Approved --></label>
+        <name>Vehicles_Requested__c</name>
+    </fields>
+    <layouts>
+        <layout>Special Assistance Layout</layout>
+        <sections>
+            <label><!-- Approved --></label>
+            <section>Approved</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Requested --></label>
+            <section>Requested</section>
+        </sections>
+        <sections>
+            <label><!-- Totals --></label>
+            <section>Totals</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

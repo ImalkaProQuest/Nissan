@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ContractualGovernmentAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contractual Government Account</shortDescription>
+        <value>0019000000alYJV</value>
+    </labels>
+</CustomLabels>

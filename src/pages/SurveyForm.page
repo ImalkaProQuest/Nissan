@@ -1,0 +1,662 @@
+<!--  
+    *Visual force page for the Survey Form for sites
+    *@author Kim Noceda - Proquest IT
+    *@version 1.0 Created 10/16/2014
+-->
+<apex:page controller="SurveyFormController" sidebar="false" showHeader="false" doctype="html-5.0">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Nissan Fleet | Post Evaluation Survey</title>
+		<apex:stylesheet value="{!URLFOR($Resource.SurveyForm, 'bootstrap.css')}"/>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+	<apex:form id="mainForm" styleClass="container">
+		<apex:actionFunction name="vehicleRateSelection" action="{!populateRadios}" rerender="null">
+			<apex:param name="vehicleRate" value="" assignTo="{!question1Value}" />
+		</apex:actionFunction>
+		<apex:actionFunction name="radioNumbersSelection" action="{!populateRadios}" rerender="null">
+			<apex:param name="questionNumber" value="" assignTo="{!questionNumber}" />
+			<apex:param name="answerValue" value="" assignTo="{!answerValue}" />
+		</apex:actionFunction>
+		<apex:actionFunction name="nissanNewsSelection" action="{!populateRadios}" rerender="null">
+			<apex:param name="nissanNews" value="" assignTo="{!question8Value}" />
+		</apex:actionFunction>
+		<apex:outputPanel id="surveyPanel" rendered="{!isValidSurvey}" styleClass="container">
+		<!-- <apex:outputPanel id="surveyPanel" rendered="false" styleClass="container"> -->
+			<div class="row">
+			    <div class="col-sm-3"><a href="#" class="logo"><apex:image value="{!URLFOR($Resource.SurveyFormImages, 'nissan.png')}" styleClass="img-responsive"/></a></div>	    
+			    <div class="col-sm-9"><apex:image value="{!URLFOR($Resource.SurveyFormImages, 'nissanCar.png')}" styleClass="img-responsive banner"/></div>
+			</div>
+			 <div class="row">
+			    <div class="col-md-2">
+			      <div class="leftNav">
+			        <p><a href="#">{!evaluationBooking.Vehicle_Name__c}</a></p>
+			        <p><a href="#">{!evaluationBooking.Organisation__c}</a></p>
+			        <p><a href="#">{!evaluationBooking.Contact__r.Name}</a></p>
+			        <p><a href="#">{!formattedSurveyDate}</a></p>
+			        <!-- <p><a href="#">{!evaluationBooking.Created_By_Name__c}</a></p> -->
+			      </div>
+			    </div>
+			    <div class="col-md-6">
+			      <h1>Post Evaluation Survey</h1>
+			      <form role="form">
+			      	<div class="spacer1"></div>
+			        <div class="form-group">
+			        	<div class="row">
+				            <div class="col-xs-1">1)</div>
+				            <div class="col-xs-11"><p>{!question_1}</p></div>
+				         </div>
+				        <div class="row">
+		                	<div class="col-xs-1"><p><input type="radio" name="compared" onclick="vehicleRateSelection('Better than current')"/></p></div>
+           					<div class="col-xs-11"><p>Better than current</p></div>
+		                </div>
+		                <div class="row">
+		                	<div class="col-xs-1"><p><input type="radio" name="compared" onclick="vehicleRateSelection('Same as current')"/></p></div>
+           					<div class="col-xs-11"><p>Same as current</p></div>
+		                </div>
+		                <div class="row">
+		                	<div class="col-xs-1"><p><input type="radio" name="compared" onclick="vehicleRateSelection('Worse than current')"/></p></div>
+           					<div class="col-xs-11"><p>Worse than current</p></div>
+		                </div>
+				        <div class="row">
+			          		<div class="col-xs-12"><apex:inputTextarea styleClass="form-control" value="{!surveyResult.Question_1_Comments__c}" rows="3" cols="100" html-placeholder="Comments"/></div>
+			          	</div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>2)</p></div>
+				            <div class="col-xs-11">
+				            	<p>{!question_2}</p>
+				          		<p class="help-block">(Please rate the the vehicle from 0-10, with 0 being "poor", 5 being "average" 			and 10 being "excellent")</p>
+				            </div>
+			        	</div>
+			        	<div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_1}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="performance" onclick="radioNumbersSelection('2-1','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="performance" onclick="radioNumbersSelection('2-1','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="performance" onclick="radioNumbersSelection('2-1','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="performance" onclick="radioNumbersSelection('2-1','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="performance" onclick="radioNumbersSelection('2-1','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="performance" onclick="radioNumbersSelection('2-1','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="performance" onclick="radioNumbersSelection('2-1','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="performance" onclick="radioNumbersSelection('2-1','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="performance" onclick="radioNumbersSelection('2-1','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="performance" onclick="radioNumbersSelection('2-1','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_2}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="safety" onclick="radioNumbersSelection('2-2','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="safety" onclick="radioNumbersSelection('2-2','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="safety" onclick="radioNumbersSelection('2-2','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="safety" onclick="radioNumbersSelection('2-2','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="safety" onclick="radioNumbersSelection('2-2','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="safety" onclick="radioNumbersSelection('2-2','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="safety" onclick="radioNumbersSelection('2-2','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="safety" onclick="radioNumbersSelection('2-2','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="safety" onclick="radioNumbersSelection('2-2','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="safety" onclick="radioNumbersSelection('2-2','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_3}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="comfort" onclick="radioNumbersSelection('2-3','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="comfort" onclick="radioNumbersSelection('2-3','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="comfort" onclick="radioNumbersSelection('2-3','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="comfort" onclick="radioNumbersSelection('2-3','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="comfort" onclick="radioNumbersSelection('2-3','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="comfort" onclick="radioNumbersSelection('2-3','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="comfort" onclick="radioNumbersSelection('2-3','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="comfort" onclick="radioNumbersSelection('2-3','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="comfort" onclick="radioNumbersSelection('2-3','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="comfort" onclick="radioNumbersSelection('2-3','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_4}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="styling" onclick="radioNumbersSelection('2-4','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="styling" onclick="radioNumbersSelection('2-4','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="styling" onclick="radioNumbersSelection('2-4','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="styling" onclick="radioNumbersSelection('2-4','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="styling" onclick="radioNumbersSelection('2-4','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="styling" onclick="radioNumbersSelection('2-4','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="styling" onclick="radioNumbersSelection('2-4','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="styling" onclick="radioNumbersSelection('2-4','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="styling" onclick="radioNumbersSelection('2-4','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="styling" onclick="radioNumbersSelection('2-4','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_5}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="innovation" onclick="radioNumbersSelection('2-5','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="innovation" onclick="radioNumbersSelection('2-5','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="innovation" onclick="radioNumbersSelection('2-5','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="innovation" onclick="radioNumbersSelection('2-5','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="innovation" onclick="radioNumbersSelection('2-5','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="innovation" onclick="radioNumbersSelection('2-5','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="innovation" onclick="radioNumbersSelection('2-5','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="innovation" onclick="radioNumbersSelection('2-5','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="innovation" onclick="radioNumbersSelection('2-5','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="innovation" onclick="radioNumbersSelection('2-5','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_6}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="fit" onclick="radioNumbersSelection('2-6','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="fit" onclick="radioNumbersSelection('2-6','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="fit" onclick="radioNumbersSelection('2-6','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="fit" onclick="radioNumbersSelection('2-6','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="fit" onclick="radioNumbersSelection('2-6','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="fit" onclick="radioNumbersSelection('2-6','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="fit" onclick="radioNumbersSelection('2-6','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="fit" onclick="radioNumbersSelection('2-6','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="fit" onclick="radioNumbersSelection('2-6','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="fit" onclick="radioNumbersSelection('2-6','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+				        <div class="spacer2"></div>
+			        	<div class="row">
+				            <div class="col-xs-1">•</div>
+				            <div class="col-xs-11"><p>{!question_2_7}</p></div>
+				        </div>
+				        <div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="value" onclick="radioNumbersSelection('2-7','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="value" onclick="radioNumbersSelection('2-7','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="value" onclick="radioNumbersSelection('2-7','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="value" onclick="radioNumbersSelection('2-7','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="value" onclick="radioNumbersSelection('2-7','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="value" onclick="radioNumbersSelection('2-7','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="value" onclick="radioNumbersSelection('2-7','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="value" onclick="radioNumbersSelection('2-7','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="value" onclick="radioNumbersSelection('2-7','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="value" onclick="radioNumbersSelection('2-7','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group btmMargin">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>3)</p></div>
+			        		<div class="col-xs-11">
+            					<p>{!question_3}</p>
+           					</div>
+			        	</div>
+			        	<div class="spacer1"></div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_1__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_1} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_2__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_2} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_3__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_3} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_4__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_4} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_5__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_5} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_6__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_6} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_7__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_7} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_3_8__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_3_8} </p>
+            				</div>
+          				</div>
+          				<div class="spacer1"></div>
+          				<div class="row">
+          					<div class="col-xs-12"><apex:inputTextarea styleClass="form-control" value="{!surveyResult.Question_3_Comments__c}" rows="3" cols="100" html-placeholder="Comments"/></div>
+         				</div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group btmMargin">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>4)</p></div>
+			        		<div class="col-xs-11">
+            					<p>{!question_4}</p>
+           					</div>
+			        	</div>
+			        	<div class="spacer1"></div>
+			        	<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_1__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_1} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_2__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_2} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_3__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_3} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_4__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_4} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_5__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_5} </p>
+            				</div>
+          				</div>
+          				<div class="row">
+          					<div class="col-xs-1"><p><apex:inputCheckBox value="{!surveyResult.Question_4_6__c}" /></p></div>
+            				<div class="col-xs-11">
+            					<p>{!question_4_6} </p>
+            				</div>
+          				</div>
+          				<div class="spacer1"></div>
+          				<div class="row">
+          					<div class="col-xs-12"><apex:inputTextarea styleClass="form-control" value="{!surveyResult.Question_4_Comments__c}" rows="3" cols="100" html-placeholder="Comments"/></div>
+         				</div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group btmMargin">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>5)</p></div>
+			        		<div class="col-xs-11">
+            					<p>{!question_5}</p>
+           					</div>
+           					<div class="spacer1"></div>
+           					<div class="row">
+           						<div class="container" style="width:100%">
+           							<div class="col-xs-12">
+	           							<apex:selectlist value="{!selectedVehicle}" size="1" styleClass="form-control">
+						         			<apex:selectOptions value="{!q5Picklist}" />
+						     			</apex:selectlist>
+	           						</div>
+           						</div>
+           					</div>
+			        	</div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>6)</p></div>
+				            <div class="col-xs-11">
+				            	<p>{!question_6}</p>
+				          		<p class="help-block">(Please rate the likelihood of you recommending this Nissan model from 0-10 with 0 being “would not recommend”, 5 being “might recommend” and 10 being “would definitely recommend”)</p>
+				            </div>
+			        	</div>
+			        	<div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="experience" onclick="radioNumbersSelection('6-1','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="experience" onclick="radioNumbersSelection('6-1','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="experience" onclick="radioNumbersSelection('6-1','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="experience" onclick="radioNumbersSelection('6-1','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="experience" onclick="radioNumbersSelection('6-1','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="experience" onclick="radioNumbersSelection('6-1','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="experience" onclick="radioNumbersSelection('6-1','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="experience" onclick="radioNumbersSelection('6-1','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="experience" onclick="radioNumbersSelection('6-1','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="experience" onclick="radioNumbersSelection('6-1','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>7)</p></div>
+				            <div class="col-xs-11">
+				            	<p>{!question_7}</p>
+				          		<p class="help-block">(Please rate the likelihood of you recommending this Nissan model from 0-10 with 0 being “would not recommend”, 5 being “might recommend” and 10 being “would definitely recommend”)</p>
+				            </div>
+			        	</div>
+			        	<div class="row">
+			          		<div class="col-xs-1"></div>
+				          	<div class="col-xs-1"><input type="radio" value="1" name="driving" onclick="radioNumbersSelection('7-1','1')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="2" name="driving" onclick="radioNumbersSelection('7-1','2')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="3" name="driving" onclick="radioNumbersSelection('7-1','3')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="4" name="driving" onclick="radioNumbersSelection('7-1','4')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="5" name="driving" onclick="radioNumbersSelection('7-1','5')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="6" name="driving" onclick="radioNumbersSelection('7-1','6')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="7" name="driving" onclick="radioNumbersSelection('7-1','7')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="8" name="driving" onclick="radioNumbersSelection('7-1','8')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="9" name="driving" onclick="radioNumbersSelection('7-1','9')"/></div>
+				          	<div class="col-xs-1"><input type="radio" value="10" name="driving" onclick="radioNumbersSelection('7-1','10')"/></div>
+				        </div>
+				        <div class="row small-txt">
+				          	<div class="col-xs-1"></div>
+				          	<div class="col-xs-1">1</div>
+				          	<div class="col-xs-1">2</div>
+				          	<div class="col-xs-1">3</div>
+				          	<div class="col-xs-1">4</div>
+				          	<div class="col-xs-1">5</div>
+				          	<div class="col-xs-1">6</div>
+				          	<div class="col-xs-1">7</div>
+				          	<div class="col-xs-1">8</div>
+				          	<div class="col-xs-1">9</div>
+				          	<div class="col-xs-1">10</div>
+				        </div>
+			        </div>
+			        <div class="spacer2"></div>
+			        <div class="form-group">
+			        	<div class="row">
+			        		<div class="col-xs-1"><p>8)</p></div>
+				            <div class="col-xs-11">
+				            	<p>{!question_8}</p>
+				            </div>
+			        	</div>
+			        	<div class="row">
+				            <div class="col-xs-1"><input type="radio" name="nissanNews" onclick="nissanNewsSelection('Yes')"/></div>
+				            <div class="col-xs-11">Yes</div>
+				        </div>
+				        <div class="row">
+				            <div class="col-xs-1"><input type="radio" name="nissanNews" onclick="nissanNewsSelection('No')"/></div>
+				            <div class="col-xs-11">No</div>
+				        </div>
+			        </div>
+			      <div>
+			      	<apex:pageMessages />
+			      </div>
+			      <div>
+			      	<apex:commandButton value="Submit" action="{!saveSurvey}" reRender="mainForm" styleClass="btn btn-default"/>
+			      </div>
+			      </form>
+			    </div>
+			  </div>
+		</apex:outputPanel>
+		
+		<apex:outputPanel id="ThankyouPanel" rendered="{!isCompleted}">
+		<!-- <apex:outputPanel id="ThankyouPanel" rendered="true">  -->
+			<head>
+			    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+			    <meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<apex:stylesheet value="{!URLFOR($Resource.SurveyForm, 'bootstrap.css')}"/>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+			    <title>Nissan Fleet | Post Evaluation Survey</title>
+			    <style type="text/css">
+			        .ReadMsgBody { width:100%;}
+			        .ExternalClass { width:100%;}
+			        p{margin:0;padding:0;}
+			        html {-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */}
+			    </style>
+			</head>
+			
+			<body style="margin:0;padding:0;" bgcolor="#ffffff">
+			<table align="center" width="100%" cellspacing="0" cellpadding="0"  bgcolor="#ffffff">
+			<tr>
+			<td>
+			    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+			        <tr>
+			            <td width="600"><!-- content -->
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" style="font-family: Arial, Helvetica, sans-serif; color:#b4b4b4; font-size: 9px; line-height: 18px;" align="center">Having trouble reading this email? <a href="#" target="_blank" style="color:#b4b4b4;text-decoration:underline;">View the online version</a>.</td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600">
+			                            <!-- <img src="images/header.jpg" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344" />  -->
+			                            <apex:image value="{!$Resource.ThankyouHeader}" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344"/>
+			                        </td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="25"></td>
+			                        <td width="545" style="font-family: Verdana, Arial, Helvetica, sans-serif; color:#333333; font-size: 11px; line-height: 14px;">
+			                            Thank you for taking the time to complete our post evaluation survey. If you have any further questions regarding Nissan Fleet or evaluation vehicles, please contact {!evaluationBooking.Created_By_Name__c} on email {!evaluationBooking.Created_By_Email__c} or call on {!evaluationBooking.Created_By_Phone__c}. <br /><br />
+			                            With thanks,  <br />
+			                            {!evaluationBooking.Created_By_Name__c}
+			                        </td>
+			                        <td width="30"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			            </td><!-- /content -->
+			        </tr>    
+			    </table>
+			</td>
+			</tr>
+			</table>
+			</body>
+		</apex:outputPanel>
+		
+		<apex:outputPanel id="SurveyExistingPanel" rendered="{!isExisting}">
+			<head>
+			    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+			    <meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<apex:stylesheet value="{!URLFOR($Resource.SurveyForm, 'bootstrap.css')}"/>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+			    <title>Nissan Fleet | Post Evaluation Survey</title>
+			    <style type="text/css">
+			        .ReadMsgBody { width:100%;}
+			        .ExternalClass { width:100%;}
+			        p{margin:0;padding:0;}
+			        html {-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */}
+			    </style>
+			</head>
+			
+			<body style="margin:0;padding:0;" bgcolor="#ffffff">
+			<table align="center" width="100%" cellspacing="0" cellpadding="0"  bgcolor="#ffffff">
+			<tr>
+			<td>
+			    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+			        <tr>
+			            <td width="600"><!-- content -->
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" style="font-family: Arial, Helvetica, sans-serif; color:#b4b4b4; font-size: 9px; line-height: 18px;" align="center">Having trouble reading this email? <a href="#" target="_blank" style="color:#b4b4b4;text-decoration:underline;">View the online version</a>.</td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600">
+			                            <!-- <img src="images/header.jpg" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344" />  -->
+			                            <apex:image value="{!$Resource.ThankyouHeader}" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344"/>
+			                        </td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="25"></td>
+			                        <td width="545" style="font-family: Verdana, Arial, Helvetica, sans-serif; color:#333333; font-size: 11px; line-height: 14px;">
+			                            <p>Thank you, we have already received a complete survey from you relating to this vehicle and booking.</p>
+			                        </td>
+			                        <td width="30"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			            </td><!-- /content -->
+			        </tr>    
+			    </table>
+			</td>
+			</tr>
+			</table>
+			</body>
+		</apex:outputPanel>
+	</apex:form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+	<apex:includeScript value="{!URLFOR($Resource.SurveyForm, 'bootstrap.min.js')}"/>
+	</body>
+</apex:page>

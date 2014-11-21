@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Order Writes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Order Writes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Customer Order Date --></label>
+        <name>Customer_Order_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Dealer Order Writes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expected Delivery Date --></label>
+        <name>Expected_Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Write Status --></label>
+        <name>Order_Write_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Customer Order Writes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUO Number --></label>
+        <name>SUO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUO Status --></label>
+        <name>SUO_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Order Writes --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Order Writes Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

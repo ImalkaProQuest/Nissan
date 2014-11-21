@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Retailed Vehicle</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Retailed Vehicles</value>
+    </caseValues>
+    <fields>
+        <help><!-- Channel derived from Sales Type. --></help>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Dealer Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 3 Vehicle Variant --></label>
+        <name>Level_3_Vehicle_Variant__c</name>
+        <relationshipLabel><!-- Retailed Vehicles (Level 3 Vehicle Variant) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Model Series --></label>
+        <name>Model_Series__c</name>
+        <relationshipLabel><!-- Retailed Vehicles (Model Series) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Write --></label>
+        <name>Order_Write__c</name>
+        <relationshipLabel><!-- Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Organisation --></label>
+        <name>Organisation__c</name>
+        <relationshipLabel><!-- Customer Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Dealer&apos;s region --></help>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retailed Date --></label>
+        <name>Retailed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retailed Vehicle Id --></label>
+        <name>Retailed_Vehicle_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUO Number --></label>
+        <name>SUO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Assistance Number --></label>
+        <name>Special_Assistance_Number__c</name>
+        <relationshipLabel><!-- Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TECH_Organisation_RecordtypeName --></label>
+        <name>TECH_Organisation_RecordtypeName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Retail or Reversal --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- VIN Number --></label>
+        <name>VIN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Retailed Vehicles --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Retailed Vehicle Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

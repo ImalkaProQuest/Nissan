@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Store all the anwers of the booking survey</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Survey Results</relationshipLabel>
+        <relationshipName>Survey_Results</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Detractor</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neutral</fullName>
+                <color>#FFCC33</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Promoter</fullName>
+                <color>#33CC00</color>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Evaluation_Booking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Evaluation Booking</label>
+        <referenceTo>Evaluation_Booking__c</referenceTo>
+        <relationshipLabel>Survey Results</relationshipLabel>
+        <relationshipName>Survey_Results</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NPS_Score_del__c</fullName>
+        <description>Used for Summarise score for all results =&gt; Dashboard purpose</description>
+        <externalId>false</externalId>
+        <label>NPS Score</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NPS_count__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Customer_Type__c, &quot;Detractor&quot;) , -1, IF(ISPICKVAL(Customer_Type__c, &quot;Neutral&quot;),0,1 ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NPS count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_1_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 1 Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_1__c</fullName>
+        <description>How would you rate this vehicle compared to your current like for like fleet/drive vehicle?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How would you rate this vehicle compared to your current like for like fleet/drive vehicle?</inlineHelpText>
+        <label>Vehicle rate compared to current vehicle</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Better than current</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Same as current</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Worse than current</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Question_2_1__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(engine options and fuel economy)</inlineHelpText>
+        <label>Performance rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_2__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>safety technology</inlineHelpText>
+        <label>Safety rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_3__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(seat position/adjustability, visibility, road handling)</inlineHelpText>
+        <label>Comfort and Handling rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_4__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Styling (interior and exterior)</inlineHelpText>
+        <label>Styling rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_5__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Innovation (vehicle features and specification)</inlineHelpText>
+        <label>Innovation rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_6__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fit for Purpose (specic needs e.g. storage, exibility)</inlineHelpText>
+        <label>Fit for purpose rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_2_7__c</fullName>
+        <description>Please rate the vehicle from 0-10 in the following key areas 
+ (Please rate the the vehicle from 0-10, with 0 being &quot;poor&quot;, 5 being &quot;average&quot; 
+ and 10 being &quot;excellent&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value for Money (includes price of vehicle, servicing costs and 
+ Whole of Life calculation)</inlineHelpText>
+        <label>Value for Money rate</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_3_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was available when I needed it.</inlineHelpText>
+        <label>Vehicle was available when I needed it</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was available for as long as I needed it</inlineHelpText>
+        <label>Available for as long as you needed it</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was vehicle delivered by a Nissan representative</inlineHelpText>
+        <label>Delivered by a Nissan representative</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was delivered by a transport supplier</inlineHelpText>
+        <label>Delivered by a transport supplier</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was vehicle delivered clean</inlineHelpText>
+        <label>Vehicle delivered clean</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_6__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The vehicle was delivered with suitable fuel</inlineHelpText>
+        <label>Delivered with suitable fuel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_7__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I was advised of the insurance and tolls policy for driving this vehicle</inlineHelpText>
+        <label>Advised of Insurance and Tolls policy</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_8__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>How would you rate your overall vehicle evaluation experience? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>I signed the Indemnity Form</inlineHelpText>
+        <label>I signed the Indemnity Form</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_3_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 3 Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price</inlineHelpText>
+        <label>Price</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fit for Purpose</inlineHelpText>
+        <label>Fit for Purpose</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whole of Life costs</inlineHelpText>
+        <label>Whole of Life costs</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Accessories</inlineHelpText>
+        <label>Accessories</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Warranty</inlineHelpText>
+        <label>Warranty</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_6__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Would there be any barriers to purchasing this vehicle? (Tick applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Other</inlineHelpText>
+        <label>Other</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Question_4_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 4 Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_5__c</fullName>
+        <description>What Nissan vehicle would you like to drive next?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What Nissan vehicle would you like to drive next?</inlineHelpText>
+        <label>Vehicle would you like to drive next?</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_6__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Based on your experience with Nissan Fleet, how likely are you to 
+ recommend Nissan to a friend or colleague?</inlineHelpText>
+        <label>Recommend Nissan?</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_7__c</fullName>
+        <description>Based on your experience with driving the &lt;insert model here&gt;, how likely 
+ are you to recommend this vehicle to a friend or colleague?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Based on your experience with driving the &lt;insert model here&gt;, how likely 
+ are you to recommend this vehicle to a friend or colleague?</inlineHelpText>
+        <label>Recommend Vehicle?</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_8__c</fullName>
+        <description>Would you like to stay updated with Nissan Fleet news?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Would you like to stay updated with Nissan Fleet news?</inlineHelpText>
+        <label>Stay updated with Nissan Fleet news?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vehicle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Survey Results</relationshipLabel>
+        <relationshipName>Survey_Results</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Survey Result</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SR-{00000000}</displayFormat>
+        <label>Survey Result Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Survey Results</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

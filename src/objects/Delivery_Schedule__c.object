@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Action_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Required</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Organisation__r.Channel__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Volume__c  *  Special_Assistance_Requested__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dealer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dealer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Delivery Schedules (Dealer)</relationshipLabel>
+        <relationshipName>Delivery_Schedule_Dealer</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Finance_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Approved</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Finance_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Requested</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Freight_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Freight Approved</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Freight_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Freight Requested</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incremental_Forecast__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Incremental to Forecast</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Delivery Schedules</relationshipLabel>
+        <relationshipName>Delivery_Schedules</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Organisation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Organisation</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Delivery Schedules (Organisation)</relationshipLabel>
+        <relationshipName>Delivery_Schedule</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Approved</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Requested</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Dealer__r.Region__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Region</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Relaxation_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration Relaxation Approved</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Relaxation_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration Relaxation Requested</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Month__c</fullName>
+        <externalId>false</externalId>
+        <label>Reporting Month</label>
+        <referenceTo>Reporting_Month__c</referenceTo>
+        <relationshipLabel>Delivery Schedules</relationshipLabel>
+        <relationshipName>Delivery_Schedule</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Special_Assistance_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Assistance Approved</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Assistance_Requested__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Assistance Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vehicle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Delivery Schedules</relationshipLabel>
+        <relationshipName>Delivery_Schedule</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Volume__c</fullName>
+        <externalId>false</externalId>
+        <label>Volume</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weekly_Special__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Weekly Special</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Delivery Schedule</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Report_Month__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Region__c</columns>
+        <columns>Channel__c</columns>
+        <columns>Organisation__c</columns>
+        <columns>Dealer__c</columns>
+        <columns>Vehicle__c</columns>
+        <columns>Volume__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DS-{00000}</displayFormat>
+        <label>Delivery Schedule Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Delivery Schedules</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Report_Month__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Vehicle__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Volume__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Vehicle__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Dealer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Organisation__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Region__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Report_Month__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vehicle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Volume__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Opportunity_Status</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(TEXT(Opportunity__r.StageName) = &apos;Closed Lost&apos;, TEXT(Opportunity__r.StageName) = &apos;Discontinued&apos;)</errorConditionFormula>
+        <errorMessage>Cannot add a Delivery Schedule to a Closed Lost or Discontinued Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Product_Level</fullName>
+        <active>true</active>
+        <errorConditionFormula>Vehicle__r.SFDC_Product_Level__c &lt;&gt; 1&amp;&amp; Vehicle__r.Do_Not_Enforce_Product_Level_Validation__c = FALSE</errorConditionFormula>
+        <errorMessage>Select a vehicle at level 1 in the product hierarchy.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Custom_New_Delivery_Schedule_Account</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Delivery Schedule</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a02/e?
+
+CF00N90000007H0Nj={!Account.Name}&amp;
+CF00N90000007H0Nj_lkid={!Account.Id}&amp;
+CF00N90000007H0Nc_lkid={!Account.Primary_DealerId__c}&amp;
+CF00N90000007H0Nc={!Account.Primary_Dealer__c}&amp;
+
+retURL=/{!Account.Id}&amp;saveURL=/{!Account.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Custom_New_Opportunity</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Delivery Schedule</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a02/e?
+
+CF00N90000007H0Ni={!Opportunity.Name}&amp;
+CF00N90000007H0Ni_lkid={!Opportunity.Id}&amp;
+CF00N90000007H0Nj_lkid={!Opportunity.AccountId}&amp;
+CF00N90000007H0Nj={!Opportunity.Account}&amp;
+CF00N90000007H0Nc_lkid={!Opportunity.Dealer_ID__c}&amp;
+CF00N90000007H0Nc={!Opportunity.Dealer_Name__c}&amp;
+
+retURL=/{!Opportunity.Id}&amp;saveURL=/{!Opportunity.Id}</url>
+    </webLinks>
+</CustomObject>

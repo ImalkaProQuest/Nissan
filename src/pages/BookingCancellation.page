@@ -1,0 +1,108 @@
+<apex:page controller="BookingCancellationController" sideBar="false" showHeader="false" doctype="html-5.0" cache="false">
+	<apex:form id="mainForm" styleClass="container">
+		<apex:outputPanel id="BookingCancellationPanel">
+			<head>
+			    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+			    <meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<apex:stylesheet value="{!URLFOR($Resource.SurveyForm, 'bootstrap.css')}"/>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+			    <title>Nissan Fleet | Booking Cancellation Confirmation</title>
+			    <style type="text/css">
+			        .ReadMsgBody { width:100%;}
+			        .ExternalClass { width:100%;}
+			        p{margin:0;padding:0;}
+			        html {-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */}
+			    </style>
+			</head>
+			
+			<body style="margin:0;padding:0;" bgcolor="#ffffff">
+			<table align="center" width="100%" cellspacing="0" cellpadding="0"  bgcolor="#ffffff">
+			<tr>
+			<td>
+			    <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+			        <tr>
+			            <td width="600"><!-- content -->
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" style="font-family: Arial, Helvetica, sans-serif; color:#b4b4b4; font-size: 9px; line-height: 18px;" align="center">Having trouble reading this email? <a href="#" target="_blank" style="color:#b4b4b4;text-decoration:underline;">View the online version</a>.</td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600">
+			                            <!-- <img src="images/header.jpg" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344" />  -->
+			                            <apex:image value="{!$Resource.ThankyouHeader}" alt="Nissan Fleet. Thank you." style="display:block;margin:0;padding:0;border:none;" width="600" height="344"/>
+			                        </td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="25"></td>
+			                        <td width="545" style="font-family: Verdana, Arial, Helvetica, sans-serif; color:#333333; font-size: 11px; line-height: 14px;">
+			                            <apex:outputPanel id="isForConfirmationPanel" rendered="{!isForConfirmation}">
+			                            	<p style="font-size: 12px;">Thank you, we understand that you may need to cancel the current booking that we have in place for the {!evaluationBooking.Vehicle_Name__c} from {!startDate} to {!endDate}.</p>
+				                            <br/>
+				                            <br/>
+				                            <p style="text-align: center;font-size: 12px;">Please confirm the actions you would like us to take.</p>
+				                            <br/>
+					                            <apex:commandButton value="Yes, please cancel my booking." action="{!confirmationCompleted}" reRender="mainForm" style="display:block;;margin:0 auto;font-size: 12px;"/>
+					                            <br/>
+					                            <apex:commandButton value="No, please keep my current booking in place." action="{!stillBooked}" reRender="mainForm" style="display:block;;margin:0 auto;font-size: 12px;"/>
+			                            </apex:outputPanel>
+			                             <apex:outputPanel id="isConfirmationCompletedPanel" rendered="{!isConfirmationCompleted}">
+			                            	<p>Thank you, your booking cancellation request has been received, and will be actioned by your Nissan Fleet Representative.</p>
+				                            <br/>
+				                            <p>Vehicle: {!evaluationBooking.Vehicle_Name__c}</p>
+				                            <br/>
+				                            <p>Date Range: {!startDate} To {!endDate}</p>
+				                            <br/>
+				                            <p>Please expect to hear back from us with this regard.</p>
+			                            </apex:outputPanel>
+			                            <apex:outputPanel id="isConfirmedPanel" rendered="{!isConfirmed}">
+			                            	<p>Thank you, your booking cancellation request has already been received.</p>
+				                            <br/>
+				                            <p>Vehicle: {!evaluationBooking.Vehicle_Name__c}</p>
+				                            <br/>
+				                            <p>Date Range: {!startDate} To {!endDate}</p>
+				                            <br/>
+				                            <p>If you have yet to hear back from your Nissan Fleet Representative, please feel free to contact us on <a href="#">Fleet_sales@nissan.com.au</a></p>
+			                            </apex:outputPanel>
+			                            <apex:outputPanel id="isBookingPendingPanel" rendered="{!isBookingPending}">
+			                            	<p>Thank you, your evaluation booking is still in place.</p>
+				                            <br/>
+				                            <p>Vehicle: {!evaluationBooking.Vehicle_Name__c}</p>
+				                            <br/>
+				                            <p>Date Range: {!startDate} To {!endDate}</p>
+				                            <br/>
+				                            <p>We look forward to receiving your feedback about the vehicle.</p>
+				                            <br/>
+				                            <p>The Nissan Fleet Team.</p>
+			                            </apex:outputPanel>
+			                        </td>
+			                        <td width="30"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b4b3">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+			                    <tr>
+			                        <td width="600" height="39"></td>
+			                    </tr>
+			                </table>
+			            </td><!-- /content -->
+			        </tr>    
+			    </table>
+			</td>
+			</tr>
+			</table>
+			</body>
+		</apex:outputPanel>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+		<apex:includeScript value="{!URLFOR($Resource.SurveyForm, 'bootstrap.min.js')}"/>
+	</apex:form>
+</apex:page>

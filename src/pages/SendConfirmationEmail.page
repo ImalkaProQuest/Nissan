@@ -1,0 +1,8 @@
+<!--  
+    *Visual force page for the Send Confirmation Email button
+    *@author Kengo Chinen - Proquest IT
+    *@version 1.0 Created 10/15/2014
+-->
+<apex:page standardController="Evaluation_Booking__c" extensions="SendConfirmationEmailExtension" action="{!sendEmail}">
+    <apex:pageMessages />
+</apex:page>

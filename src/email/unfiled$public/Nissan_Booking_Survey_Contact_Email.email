@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <style type="text/css">
+        .ReadMsgBody { width:100%;}
+        .ExternalClass { width:100%;}
+        p{margin:0;padding:0;}
+        html {-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */}
+    </style>
+</head>
+
+<body style="margin:0;padding:0;" bgcolor="#ffffff">
+<table align="center" width="100%" cellspacing="0" cellpadding="0"  bgcolor="#ffffff">
+<tr>
+<td>
+    <table width="599" align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+        <tr>
+            <td width="599"><!-- content -->
+                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+                    <tr>
+                        <td width="599" style="font-family: Arial, Helvetica, sans-serif; color:#b4b4b4; font-size: 9px; line-height: 18px;" align="center">Having trouble reading this email? <a href="#" target="_blank" style="color:#b4b4b4;text-decoration:underline;">View the online version</a>.</td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#c0bdbc">
+                    <tr>
+                        <td width="599">
+                            <img src="https://c.cs6.content.force.com/servlet/servlet.ImageServer?id=015N0000000AEjQ&oid=00DN0000000Phki" alt="Nissan Fleet. Request for survey completion" style="display:block;margin:0;padding:0;border:none;" width="599" height="365" /> 
+                        </td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b5b3">
+                    <tr>
+                        <td width="25"></td>
+                        <td width="544" style="font-family: Verdana, Arial, Helvetica, sans-serif; color:#333333; font-size: 11px; line-height: 14px;">
+                            Dear {!Evaluation_Booking__c.Contact_First_Name__c}, <br /><br />
+                            We hope that you enjoyed your recent experience of driving the Nissan {!Evaluation_Booking__c.Vehicle_Name__c}.
+                            We would appreciate if you would take the time to complete the attached survey, which should take you no more than 10 minutes to complete. <br /><br />
+                            As part of our commitment to you, our valued Fleet customers, the results of the survey will be collected and used by the Nissan Fleet team to understand areas that are working well and identify improvement opportunities. <br /><br />
+                            Please feel free to contact me on {!Evaluation_Booking__c.Created_By_Email__c} or on {!Evaluation_Booking__c.Created_By_Phone__c}.  <br /><br />
+                            You will find the link to the survey <a href="http://dev-nissanfleetevaluation.cs6.force.com/evaluationsurvey?contactId={!Evaluation_Booking__c.ContactId__c}&bookingId={!Evaluation_Booking__c.Id}" target="_blank" style="color:#333333;text-decoration:underline;">here</a><br /><br />
+                            We look forward to working with you in the future.  <br /><br />
+                            With thanks,  <br />
+                            {!Evaluation_Booking__c.Created_By_Name__c}
+                        </td>
+                        <td width="30"></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#b6b5b3">
+                    <tr>
+                        <td width="599" height="39"></td>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff">
+                    <tr>
+                        <td width="599" height="39"></td>
+                    </tr>
+                </table>
+            </td><!-- /content -->
+        </tr>    
+    </table>
+</td>
+</tr>
+</table>
+</body>
+</html>

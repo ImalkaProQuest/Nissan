@@ -1,0 +1,169 @@
+<apex:page controller="BookingCalendarController2" sidebar="false" doctype="html-5.0">
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery, 'jquery-ui.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.JQuery, 'jquery-ui.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.CalendarBookingSticky, 'component.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.CalendarBookingSticky, 'jquery.min.js')}"/>
+    <!-- <apex:includeScript value="{!URLFOR($Resource.CalendarBookingSticky, 'jquery.stickyheader.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.CalendarBookingSticky, 'jquery.ba-throttle-debounce.min.js')}"/> -->
+    <script>
+    
+        function newBooking(vehicleId,vehicleName,dateWrapId){
+            //DEV LINK
+            var evalBookDate = dateWrapId.substr(2,18);
+            var url = '/a0C/e?'+'CF00NN0000000xvVO_lkid='+vehicleId+'&CF00NN0000000xvVO='+vehicleName+'&00NN0000000xvbC='+evalBookDate;
+            window.open(url);   
+        }
+        
+        function oldBooking(bookingId){
+            //DEV LINK
+            var evalBookId = bookingId.substr(2,18);
+            var url = '/'+evalBookId;
+            window.open(url);
+        }
+        
+        function showColors(){
+        }
+        
+        $(document).ready(function () {
+        $("#vehicleBookingTable").freezeHeader({ 'height': '300px' });
+        })
+        
+    </script>
+    <style>
+        .tableCellPointerNew {
+            width: 10px;
+            cursor: pointer;
+        }
+        
+        .tableCellPointerExisting {
+            width: 10px;
+            cursor: pointer;
+        }
+        
+        a.tooltip {outline:none; }
+        a.tooltip strong {line-height:30px;}
+        a.tooltip:hover {text-decoration:none;} 
+        a.tooltip span {
+            z-index:10;display:none; padding:14px 20px;
+            margin-top:-30px; margin-left:28px;
+            width:200px; line-height:16px;
+        }
+        a.tooltip:hover span{
+            display:inline; position:absolute; color:#111;
+            border:1px solid #DCA; background:#fffAF0;}
+        .callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+            
+        /*CSS3 extras*/
+        a.tooltip span
+        {
+            border-radius:4px;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+        
+    </style>
+    <apex:form id="mainForm">
+        <apex:pageMessages />
+        <apex:sectionHeader title="Evaluation Vehicles" subtitle="Booking Calendar"/>
+        <apex:outputPanel id="searchPanel">
+            <apex:outputLink value="/a0C?fcf=00BN0000000W7J3" id="theLink">Bookings List</apex:outputLink>
+            <br/>
+            <br/>
+            <!--  <apex:panelGrid columns="4" id="regionPanelGrid">
+                <apex:outputLabel value="Region: " style="font-weight:bold;"/>
+                    <apex:selectList id="sel1" value="{!leftselected}" multiselect="true" style="width:100px" size="3">
+                        <apex:selectOptions value="{!unSelectedRegionValues}" />
+                    </apex:selectList>
+                    <apex:panelGroup >
+                        <br/>
+                        <apex:commandButton value=">>" action="{!selectRegionClick}" reRender="regionPanelGrid"/>
+                        <br/>
+                        <apex:commandButton value="<<" action="{!unselectRegionClick}" reRender="regionPanelGrid"/>
+                    </apex:panelGroup>
+                    <apex:selectList id="sel2" value="{!rightselected}" multiselect="true" style="width:100px" size="3">
+                        <apex:selectOptions value="{!SelectedRegionValues}" />
+                    </apex:selectList>
+            </apex:panelGrid>-->
+            <br/>
+            <apex:panelGrid columns="2" id="modelPanelGrid">
+                <apex:outputLabel value="Model: " style="font-weight:bold;"/>
+                 <apex:selectlist value="{!selectedModel}" multiselect="true" size="3">
+                     <apex:selectOptions value="{!ModelPicklist}" />
+                 </apex:selectlist>
+            </apex:panelGrid>
+            <br/>
+            <apex:panelGrid columns="2" id="statusPanelGrid">
+                <apex:outputLabel value="Status: " style="font-weight:bold;"/>
+                 <apex:selectlist value="{!selectedStatus}" multiselect="true" size="3">
+                     <apex:selectOptions value="{!StatusPicklist}" />
+                 </apex:selectlist>
+            </apex:panelGrid>
+            <br/>
+            <apex:panelGrid columns="2">
+                <apex:outputLabel value="Date: " style="font-weight:bold;"/>
+                <apex:inputField value="{!taskDate.ActivityDate}" style="font-family:Arial"/>
+                <apex:commandButton value="Go" action="{!showSelectedRegion}" reRender="mainForm" />
+            </apex:panelGrid>
+            
+        </apex:outputPanel>
+        <br/>
+        <!-- <apex:outputPanel rendered="{!showCalendar}" id="vehicleBookingPanel" layout="block" > -->
+            <!-- <div class="component"> -->
+            <div style="overflow:auto;width:1800px;">
+                <table id="vehicleBookingTable" class="fixed-header">
+                    <thead><tr>
+                        <th style="width:50px">Region</th>
+                        <th style="width:50px">Model</th>
+                        <th style="width:50px">Drive</th>
+                        <th style="width:50px">Trans</th>
+                        <th style="width:65px">Variant</th>
+                        <th style="width:51px">Rego</th>
+                        <th style="width:90px">Colour</th>
+                        <th style="width:110px">Status</th>
+                        <apex:repeat value="{!datesWrapper}" var="bookDates">
+                            <!-- <th class="{!IF((bookDates.isWeekend == true),'off','on')}"><span>{!bookDates.dateRangeString}</span></th> -->
+                            <th class="{!bookDates.dateStyling}"><span>{!bookDates.dateRangeString}</span></th>
+                        </apex:repeat>
+                    </tr></thead>
+                    <apex:repeat value="{!bookingWrapper}" var="eBook">
+                        <tbody><tr>
+                            <th style="width:50px">{!eBook.evalVehicle.Region_Initials__c}</th>
+                            <th style="width:50px">{!eBook.evalVehicle.Vehicle__r.Model_Series__c}</th>
+                            <th style="width:50px">{!eBook.evalVehicle.Drive__c}</th>
+                            <th style="width:50px">{!eBook.evalVehicle.Trans_Initials__c}</th>
+                            <th style="width:65px">{!eBook.evalVehicle.Variant__c}</th>
+                            <th style="width:51px">{!eBook.evalVehicle.SUO__c}</th>
+                            <th style="width:90px">{!eBook.evalVehicle.Colour__c}</th>
+                            <th style="width:110px">{!eBook.evalVehicle.Status__c}</th>
+                            <apex:repeat value="{!eBook.isBooked}" var="dateWrap">
+                                <td class="{!IF((LEFT(dateWrap,1) != '0'),'link reserved','link')}">
+                                    <apex:outputPanel rendered="{!IF((LEFT(dateWrap,1) != '0'),true,false)}">
+                                        <span class="tableCellPointerExisting">
+                                            <p id="bookedDate" onclick="oldBooking('{!dateWrap}')">
+                                                <a href="#" class="tooltip">
+                                                    <span>
+                                                       {!MID(dateWrap,21,70)}
+                                                    </span>
+                                                </a>
+                                            </p>
+                                        </span>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!IF((LEFT(dateWrap,1) == '0'),true,false)}">
+                                        <span class="tableCellPointerNew">
+                                            <p id="vacantDate" onclick="newBooking('{!eBook.evalVehicle.Id}','{!eBook.evalVehicle.Name}','{!RIGHT(dateWrap,18)}')">
+                                                <a href="#" class="tooltip" >
+                                                    <span>
+                                                        Click to create a new evaluation booking
+                                                    </span>
+                                                </a>
+                                            </p>
+                                        </span>
+                                    </apex:outputPanel>
+                                </td>
+                            </apex:repeat>
+                        </tr></tbody>
+                    </apex:repeat>  
+                </table>
+            </div>
+        <!-- </apex:outputPanel> -->
+    </apex:form>
+</apex:page>
