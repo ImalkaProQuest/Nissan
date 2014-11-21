@@ -4,7 +4,7 @@
     <property environment="env"/>
 
 	<target name="test">
-      <sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" deployRoot="src" runAllTests="true" />
+      <sf:deploy username="${username}" password="${password}" serverurl="${serverurl}" deployRoot="src" runAllTests="true" checkOnly="true"/>
     </target>
 
 	<target name="clean">
