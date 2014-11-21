@@ -178,6 +178,27 @@
         <name>Document</name>
     </types>
     <types>
+        <members>unfiled$public/ContactFollowUpSAMPLE</members>
+        <members>unfiled$public/Contract_Expiration_Notification_12_months</members>
+        <members>unfiled$public/Contract_Expiration_Notification_3_months</members>
+        <members>unfiled$public/Contract_Expiration_Notification_6_months</members>
+        <members>unfiled$public/Final_Cancellation_Email</members>
+        <members>unfiled$public/LeadsNewassignmentnotificationSAMPLE</members>
+        <members>unfiled$public/Nissan_Booking_Cancellation_Email_To_Client</members>
+        <members>unfiled$public/Nissan_Booking_Cancellation_Email_To_Nissan_Representative</members>
+        <members>unfiled$public/Nissan_Booking_Contact_Email</members>
+        <members>unfiled$public/Nissan_Booking_Survey_Contact_Email</members>
+        <members>unfiled$public/SUPPORTCaseResponsewithSolutionSAMPLE</members>
+        <members>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
+        <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
+        <members>unfiled$public/SUPPORTWebtoCaseemailresponseSAMPLE</members>
+        <members>unfiled$public/Survey_Reminder</members>
+        <name>EmailTemplate</name>
+    </types>
+    <types>
         <members>*</members>
         <name>FlexiPage</name>
     </types>
@@ -389,7 +410,6 @@
         <members>Sales_Marketing_Dashboard_Reports/Sales_Person_Activity</members>
         <members>Sales_Marketing_Dashboard_Reports/Sales_Person_MTD_Sales</members>
         <members>Sales_Marketing_Dashboard_Reports/Sales_Person_Open_Pipeline_by_stage</members>
-        <members>unfiled$public</members>
         <members>unfiled$public/Evaluation_Vehicle_Utilisation1</members>
         <members>unfiled$public/SampleReportActiveUsers</members>
         <members>unfiled$public/SampleReportCasesStatusbyRep</members>
