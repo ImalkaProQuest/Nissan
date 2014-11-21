@@ -3799,7 +3799,7 @@
         <name>CustomizeApplication</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>DataExport</name>
     </userPermissions>
     <userPermissions>
