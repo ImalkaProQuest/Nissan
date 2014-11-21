@@ -3799,10 +3799,6 @@
         <name>CustomizeApplication</name>
     </userPermissions>
     <userPermissions>
-        <enabled>false</enabled>
-        <name>DataExport</name>
-    </userPermissions>
-    <userPermissions>
         <enabled>true</enabled>
         <name>DeleteActivatedContract</name>
     </userPermissions>
