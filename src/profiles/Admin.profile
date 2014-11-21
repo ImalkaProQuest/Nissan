@@ -3017,9 +3017,6 @@
         <layout>FMO_Organisations__c-FMO Organisation Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>FeedItem-Feed Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Forecast__c-Forecast Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
