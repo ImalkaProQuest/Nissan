@@ -178,7 +178,6 @@
         <name>Document</name>
     </types>
     <types>
-        <members>unfiled$public</members>
         <members>unfiled$public/ContactFollowUpSAMPLE</members>
         <members>unfiled$public/Contract_Expiration_Notification_12_months</members>
         <members>unfiled$public/Contract_Expiration_Notification_3_months</members>
@@ -189,9 +188,6 @@
         <members>unfiled$public/Nissan_Booking_Cancellation_Email_To_Nissan_Representative</members>
         <members>unfiled$public/Nissan_Booking_Contact_Email</members>
         <members>unfiled$public/Nissan_Booking_Survey_Contact_Email</members>
-        <members>unfiled$public/SUPPORT%3A Self-Service New Comment %28SAMPLE%29</members>
-        <members>unfiled$public/SUPPORT%3A Self-Service New User Login %28SAMPLE%29</members>
-        <members>unfiled$public/SUPPORT%3A Self-Service Reset Password %28SAMPLE%29</members>
         <members>unfiled$public/SUPPORTCaseResponsewithSolutionSAMPLE</members>
         <members>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</members>
         <members>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</members>
